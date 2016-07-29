@@ -12,12 +12,12 @@ npm install react-switch-case -save
 ### Step 2:
 
 Inject component on your page:
-```
+```jsx
 import Switch, {Case, Default} from 'react-switch-case';
 ```
 
 ### Step 3:
-```
+```jsx
 let componentShow = 'component1';
 
 ...
@@ -34,3 +34,7 @@ let componentShow = 'component1';
   </Default>
 </Switch>
 ```
+
+## License
+
+MIT
