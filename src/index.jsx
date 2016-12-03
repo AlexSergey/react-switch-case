@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Children} from 'react';
 /**
  * Switch component for React
  *
@@ -14,7 +14,7 @@ class Switch extends Component {
         var cases    = [],
             defaults = [];
 
-        this.props.children.forEach(function(item) {
+        Children.forEach(this.props.children, (item) => {
             switch (item.type.componentName) {
             case 'case':
                 if (this.props.condition === item.props.value) {
@@ -25,7 +25,7 @@ class Switch extends Component {
                 defaults.push(item);
                 break;
             }
-        }, this);
+        });
 
         if (cases.length > 0) {
             return cases;
