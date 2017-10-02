@@ -13,7 +13,7 @@ npm install react-switch-case -save
 
 Inject component on your page:
 ```jsx
-import Switch, {Case, Default} from 'react-switch-case';
+import Switch, { Case, Default } from 'react-switch-case';
 ```
 
 ### Step 3:
@@ -22,15 +22,17 @@ let componentShow = 'component1';
 
 ...
 
-<Switch condition={componentShow} addClass={'someclassname'}>
+<Switch condition={componentShow}>
   <Case value='component1'>
     <Component1 />
   </Case>
   <Case value='component2'>
     <Component2 />
+    ...
   </Case>
   <Default>
-    <span>Nothing!</span>
+    Nothing!
+    <strong>default state</strong>
   </Default>
 </Switch>
 ```

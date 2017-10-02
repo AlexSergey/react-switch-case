@@ -1,10 +1,9 @@
-import React, {Component, Children} from 'react';
+import React, {Component, Children, createElement} from 'react';
 /**
  * Switch component for React
  *
  * Switch parameters:
  * condition {String} is condition for choice children component
- * addClass {String} class for childrens block-wrapper
  *
  * Case parameters:
  * value {String} is anchor for Switch
@@ -34,13 +33,9 @@ class Switch extends Component {
     }
 
     render() {
-        return (
-            <div className={this.props.addClass ? this.props.addClass : ''}>
-                {this.getChildrens().map(function(item, index) {
-                    return item;
-                })}
-            </div>
-        );
+        const children = this.getChildrens();
+
+        return children.length === 0 ? null : children;
     }
 }
 
@@ -61,5 +56,5 @@ class Default extends Component {
 }
 
 export default Switch;
-export {Case};
-export {Default};
+export { Case };
+export { Default };
