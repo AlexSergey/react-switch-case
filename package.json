@@ -12,6 +12,12 @@
   },
   "author": "Aleksandrov Sergey <gooddev.sergey@gmail.com> (https://github.com/AlexSergey/react-switch-case)",
   "license": "MIT",
+  "keywords": [
+    "react",
+    "react-component",
+    "state",
+    "ui"
+  ],
   "dependencies": {
     "react": "16.7.0"
   },
