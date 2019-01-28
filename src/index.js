@@ -1,4 +1,4 @@
-import React, {Component, Children, createElement} from 'react';
+import { Component, Children } from 'react';
 /**
  * Switch component for React
  *
@@ -9,8 +9,8 @@ import React, {Component, Children, createElement} from 'react';
  * value {String} is anchor for Switch
  * */
 class Switch extends Component {
-    getChildrens() {
-        var cases    = [],
+    getChildren() {
+        let cases    = [],
             defaults = [];
 
         Children.forEach(this.props.children, (item) => {
@@ -33,7 +33,7 @@ class Switch extends Component {
     }
 
     render() {
-        const children = this.getChildrens();
+        const children = this.getChildren();
 
         return children.length === 0 ? null : children;
     }

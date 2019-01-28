@@ -1,5 +1,0 @@
-|=======================================|
-|        React Switch Case 1.0.3        |
-|=======================================|
-Switch statement in React components
-https://github.com/AlexSergey/react-switch-case
