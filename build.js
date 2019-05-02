@@ -1,9 +1,6 @@
-const { compile } = require('rocket-starter');
+const { libraryCompiler } = require('rocket-starter');
 
-compile({
-    html: false,
-    library: 'Switch'
-}, config => {
+libraryCompiler('Switch', {}, config => {
     config.externals = [{
         react: {
             root: 'React',

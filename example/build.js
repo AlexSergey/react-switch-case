@@ -1,5 +1,5 @@
-let { compile } = require('../node_modules/rocket-starter');
+let { frontendCompiler } = require('../node_modules/rocket-starter');
 
-compile({
+frontendCompiler({
     url: './'
 });
