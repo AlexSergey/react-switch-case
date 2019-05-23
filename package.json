@@ -19,10 +19,8 @@
     "state",
     "ui"
   ],
-  "dependencies": {
-    "react": "16.8.6"
-  },
   "devDependencies": {
+    "react": "16.8.6",
     "rocket-starter": "1.0.0"
   }
 }
