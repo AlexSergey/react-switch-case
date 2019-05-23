@@ -1,8 +1,8 @@
 # React Switch Case
 
-Little helper for switch-case statement for React components.
+Little switch-case React component to render nested components.
 
-## How usage
+## Usage
 
 ### Step 1:
 ```sh
@@ -11,7 +11,6 @@ npm install react-switch-case -save
 
 ### Step 2:
 
-Inject component on your page:
 ```jsx
 import Switch, { Case, Default } from 'react-switch-case';
 ```

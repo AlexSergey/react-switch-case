@@ -1,7 +1,7 @@
 {
   "name": "react-switch-case",
-  "version": "1.0.7",
-  "description": "Little helper for switch-case statement for React components.",
+  "version": "1.0.8",
+  "description": "Little switch-case React component to render nested components.",
   "main": "dist/main.js",
   "scripts": {
     "build": "NODE_ENV=production node build"
