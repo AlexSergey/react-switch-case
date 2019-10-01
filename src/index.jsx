@@ -16,7 +16,12 @@ class Switch extends Component {
         Children.forEach(this.props.children, (item) => {
             switch (item.type.componentName) {
             case 'case':
-                if (this.props.condition === item.props.value) {
+                if (typeof this.props.condition === 'function') {
+                    if (this.props.condition(item.props.value)) {
+                        cases.push(item);
+                    }
+                }
+                else if (this.props.condition === item.props.value) {
                     cases.push(item);
                 }
                 break;

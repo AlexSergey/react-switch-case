@@ -20,7 +20,7 @@ import Switch, { Case, Default } from 'react-switch-case';
 ```jsx
 const componentShow = 'component1';
 
-<Switch condition={componentShow} addClass={'someclassname'}>
+<Switch condition={componentShow || (value) => compare(value)}>
     <Case value="component1">
         <span>Component 1</span>
     </Case>
