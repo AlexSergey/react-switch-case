@@ -14,4 +14,8 @@ logs
 reports
 
 NO_COMMIT
+
 dist
+lib
+coverage
+test-reports

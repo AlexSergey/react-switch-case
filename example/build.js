@@ -1,5 +1,5 @@
-let { frontendCompiler } = require('../node_modules/rocket-starter');
+let { frontendCompiler } = require('@rockpack/compiler');
 
-frontendCompiler({
-    url: './'
+frontendCompiler({}, finalConfig => {
+    finalConfig.output.publicPath = './';
 });

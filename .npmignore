@@ -16,3 +16,6 @@ documentation
 webpack.customConfig.js
 example
 examples
+src
+coverage
+test-reports

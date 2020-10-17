@@ -1,12 +1,16 @@
-const { libraryCompiler } = require('rocket-starter');
+const { libraryCompiler } = require('@rockpack/compiler');
 
-libraryCompiler('Switch', {}, config => {
-    config.externals = [{
-        react: {
-            root: 'React',
-            commonjs2: 'react',
-            commonjs: 'react',
-            amd: 'react'
-        }
-    }]
+libraryCompiler({
+  name: 'Switch',
+  cjs: {
+    src: './src',
+    dist: './lib/cjs'
+  },
+  esm: {
+    src: './src',
+    dist: './lib/esm'
+  },
+  externals: [
+    'react'
+  ]
 });

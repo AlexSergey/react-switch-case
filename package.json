@@ -1,10 +1,12 @@
 {
   "name": "react-switch-case",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Little switch-case React component to render nested components.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "NODE_ENV=production node build"
+    "start": "cross-env NODE_ENV=development node build",
+    "build": "cross-env NODE_ENV=production node build",
+    "production": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,6 @@
   ],
   "devDependencies": {
     "react": "16.8.6",
-    "rocket-starter": "1.7.0"
+    "@rockpack/compiler": "1.0.0"
   }
 }
