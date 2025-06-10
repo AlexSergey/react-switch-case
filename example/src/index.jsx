@@ -1,52 +1,58 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import {StrictMode, useEffect, useState} from 'react';
+import {createRoot} from 'react-dom/client';
+
 import Switch, { Case, Default } from '../../src';
 
-class Layout extends React.Component {
-    componentWillMount() {
+const Layout = () => {
+    const [componentShow, setComponentShow] = useState('component1');
+    useEffect(() => {
         setTimeout(() => {
-            this.setState({componentShow: 'component2'});
+            setComponentShow('component2');
         }, 1000);
         setTimeout(() => {
-            this.setState({componentShow: 'component3'});
+            setComponentShow('component3');
         }, 3000);
-    }
-    render() {
-        let componentShow = (this.state && this.state.componentShow) ? this.state.componentShow : 'component1';
-        return (
-            <div>
-                <Switch condition={componentShow}>
-                    <Case value="component1">
-                        <span>Component 1</span>
-                    </Case>
-                    <Case value="component2">
-                        <span>Component 2</span>
-                    </Case>
-                    <Default>
-                        <span>Nothing!</span>
-                    </Default>
-                </Switch>
-                <h2>Condition as function</h2>
-                <Switch condition={(value) => ['moderator', 'admin'].indexOf(value) >= 0}>
-                    <Case value="user">
-                        <div>I am user</div>
-                    </Case>
-                    <Case value="admin">
-                        <div>I am admin</div>
-                    </Case>
-                    <Case value="moderator">
-                        <div>I am moderator</div>
-                    </Case>
-                    <Default>
-                        <div>I am not authorized!</div>
-                    </Default>
-                </Switch>
-            </div>
-        )
-    }
+    }, []);
+
+    return (
+        <div>
+            <Switch condition={componentShow}>
+                <Case value="component1">
+                    <span>Component 1</span>
+                </Case>
+                <Case value="component2">
+                    <span>Component 2</span>
+                </Case>
+                <Default>
+                    <span>Nothing!</span>
+                </Default>
+            </Switch>
+            <h2>Condition as function</h2>
+            <Switch condition={(value) => ['moderator', 'admin'].indexOf(value) >= 0}>
+                <Case value="user">
+                    <div>I am user</div>
+                </Case>
+                <Case value="admin">
+                    <div>I am admin</div>
+                </Case>
+                <Case value="moderator">
+                    <div>I am moderator</div>
+                </Case>
+                <Default>
+                    <div>I am not authorized!</div>
+                </Default>
+            </Switch>
+        </div>
+    )
 }
 
-ReactDOM.render(
-<Layout />,
-    document.getElementById('root')
+
+const container = document.getElementById('root');
+
+const root = createRoot(container);
+
+root.render(
+    <StrictMode>
+        <Layout />
+    </StrictMode>
 );

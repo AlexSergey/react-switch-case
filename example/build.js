@@ -1,5 +1,6 @@
 let { frontendCompiler } = require('@rockpack/compiler');
 
-frontendCompiler({}, finalConfig => {
-    finalConfig.output.publicPath = './';
+frontendCompiler({}, (finalConfig, _, __, mode) => {
+    console.log(mode);
+    finalConfig.output.publicPath = mode === 'development' ? '/' : './';
 });

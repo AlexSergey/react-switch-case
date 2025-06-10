@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "16.8.6",
-    "react-dom": "16.8.6"
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   }
 }
