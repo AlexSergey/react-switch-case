@@ -22,7 +22,7 @@
     "ui"
   ],
   "devDependencies": {
-    "react": "16.8.6",
-    "@rockpack/compiler": "1.0.0"
+    "react": "19.2.4",
+    "@rockpack/compiler": "7.1.0"
   }
 }
